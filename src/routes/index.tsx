@@ -1,11 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Nav } from "../components/Nav";
 import { Signup } from "../pages/Signup";
 import { MainIcon, Home, Help } from "../pages/Preview";
-import { Court } from "../pages/court";
+import { Court } from "../pages/Court";
 import GlobalStyle from "../assets/styles/global-style";
+import { Nav } from "../components/Nav";
 
 const MainWrapper = styled.div`
   position: absolute;
