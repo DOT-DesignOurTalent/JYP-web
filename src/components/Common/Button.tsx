@@ -22,7 +22,12 @@ const CommonButton = styled.button<CommonButtonType>`
 `;
 
 const Button: React.FC<ButtonProps> = ({ item }: ButtonProps) => {
-  return <CommonButton size={item.size}>{item.text}</CommonButton>;
+  const { text, size, onClick } = item;
+  return (
+    <CommonButton onClick={onClick} size={size}>
+      {text}
+    </CommonButton>
+  );
 };
 
 export default Button;
