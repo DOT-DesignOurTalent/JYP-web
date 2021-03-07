@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Signup } from "../pages/Signup";
 import { MainIcon, Home, Help } from "../pages/Preview";
-import { Court } from "../pages/Court";
 import GlobalStyle from "../assets/styles/global-style";
 import { Nav } from "../components/Nav";
+import { Create, Judge, Complete } from "../pages/Court";
 
 const MainWrapper = styled.div`
   position: absolute;
@@ -31,7 +31,9 @@ const Routes: React.FC = () => {
               <Route path="/beopjeom" component={MainIcon} exact></Route>
               <Route path="/home" component={Home} exact></Route>
               <Route path="/signup" component={Signup} exact></Route>
-              <Route path="/court" component={Court}></Route>
+              <Route path="/court" exact component={Create}></Route>
+              <Route path="/court/judge" exact component={Judge}></Route>
+              <Route path="/court/complete" exact component={Complete}></Route>
               <Route path="/help" component={Help}></Route>
             </Switch>
           </SubWrapper>
