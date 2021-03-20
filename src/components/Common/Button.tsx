@@ -18,7 +18,8 @@ const CommonButton = styled.button<CommonButtonType>`
   border-radius: 35px;
   height: 48px;
 
-  width: ${(props) => (props.size === "M" ? "280px" : "300px")};
+  width: ${(props) => (props.size === "M" ? "280px" : props.size === "L" ? "300px" : "105px")};
+  z-index: 11;
 `;
 
 const Button: React.FC<ButtonProps> = ({ item }: ButtonProps) => {
