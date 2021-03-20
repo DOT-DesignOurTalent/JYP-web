@@ -14,7 +14,7 @@ export const NavData: NavbarItem[] = [
   },
   {
     title: "법점",
-    path: "/court",
+    path: "/Court",
     icon: <Judge />,
   },
   {
