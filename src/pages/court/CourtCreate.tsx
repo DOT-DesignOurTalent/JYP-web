@@ -5,6 +5,7 @@ import mainIcon from "../../assets/images/starLogo.png";
 import Envelope from "../../assets/images/Envelope";
 import CopyPaste from "../../assets/images/CopyPaste";
 import { useHistory } from "react-router";
+import Pizza from "../../assets/images/Pizza";
 
 const CourtWrapper = styled.div`
   width: 100%;
@@ -88,6 +89,18 @@ const LetterBlackText = styled.span`
   margin-top: 24px;
 `;
 
+const LetterNoProblem = styled.span`
+  position: absolute;
+  top: 574px;
+  font-family: Noto Sans;
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #777777;
+  cursor: pointer;
+  z-index: 11;
+`;
+
 const LetterPlusButton = styled.span`
   color: #cccccc;
   font-size: 31px;
@@ -99,7 +112,7 @@ const LetterPlusButton = styled.span`
   cursor: pointer;
   z-index: 11;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 
 const LetterLinkWrapper = styled.div`
@@ -109,7 +122,7 @@ const LetterLinkWrapper = styled.div`
   border: 0.5px solid #15366d;
   border-radius: 25px;
   margin-top: 60px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   z-index: 11;
   display: flex;
   align-items: center;
@@ -117,7 +130,7 @@ const LetterLinkWrapper = styled.div`
   padding: 8px 8px 8px 16px;
 `;
 
-const LetterLink = styled.span`
+const LetterLink = styled.input`
   font-size: 15px;
   color: #333333;
 `;
@@ -156,15 +169,13 @@ const SelectMenuModalTitle = styled.div`
 const SelectMenuModalMenuWrapper = styled.div`
   width: 590px;
   padding: 30px 30px 0px 30px;
-`;
-
-const FakeImg = styled.div`
-  width: 110px;
-  height: 110px;
-  background-color: yellow;
-  margin-bottom: 16px;
-  &:not(:nth-child(4n-3)) {
+  svg:not(:nth-child(4n-3)) {
     margin-left: 30px;
+  }
+  svg:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    border: 1px solid #00ffff;
+    box-sizing: border-box;
   }
 `;
 
@@ -213,6 +224,7 @@ const CourtCreate: React.FC = () => {
             <LetterDescription>법정을 생성해 친구들을 초대해 보세요!</LetterDescription>
             <LetterBlackText>가고싶은 음식점</LetterBlackText>
             <LetterPlusButton onClick={openModal}>+</LetterPlusButton>
+            <LetterNoProblem>어떤 메뉴든 상관 없어요</LetterNoProblem>
             <Button item={ButtonData} />
           </Letter>
           <Envelope />
@@ -222,8 +234,7 @@ const CourtCreate: React.FC = () => {
             <LetterTitle>코드 입장</LetterTitle>
             <LetterDescription>법정을 생성해 친구들을 초대해 보세요!</LetterDescription>
             <LetterLinkWrapper>
-              <LetterLink>https://www.naver.com/</LetterLink>
-              <CopyPaste />
+              <LetterLink />
             </LetterLinkWrapper>
             <Button item={ButtonData} />
           </Letter>
@@ -235,18 +246,18 @@ const CourtCreate: React.FC = () => {
           <SelectMenuModalTitle>원하는 메뉴를 선택해주세요.</SelectMenuModalTitle>
           <SelectMenuModalMenuWrapper>
             <SelectMenuModalMenus>
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
-              <FakeImg />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
+              <Pizza />
             </SelectMenuModalMenus>
             <SelectMenuModalMenus></SelectMenuModalMenus>
           </SelectMenuModalMenuWrapper>
